@@ -1,0 +1,12 @@
+G:\WEBSITES\SwapandSales\NEWDESIGN\SwapNSales\bin\SwapNSales.dll
+G:\WEBSITES\SwapandSales\NEWDESIGN\SwapNSales\bin\SwapNSales.pdb
+G:\WEBSITES\SwapandSales\NEWDESIGN\SwapNSales\obj\Debug\SwapNSales.csprojResolveAssemblyReference.cache
+G:\WEBSITES\SwapandSales\NEWDESIGN\SwapNSales\obj\Debug\SwapNSales.dll
+G:\WEBSITES\SwapandSales\NEWDESIGN\SwapNSales\obj\Debug\SwapNSales.pdb
+G:\WEBSITES\SwapandSales\NEWDESIGN\SwapNSales\bin\AjaxControlToolkit.dll
+G:\WEBSITES\Neemo\NEWDESIGN_V1\NEWDESIGN\SwapNSales\bin\SwapNSales.dll
+G:\WEBSITES\Neemo\NEWDESIGN_V1\NEWDESIGN\SwapNSales\bin\SwapNSales.pdb
+G:\WEBSITES\Neemo\NEWDESIGN_V1\NEWDESIGN\SwapNSales\bin\AjaxControlToolkit.dll
+G:\WEBSITES\Neemo\NEWDESIGN_V1\NEWDESIGN\SwapNSales\obj\Debug\SwapNSales.csprojResolveAssemblyReference.cache
+G:\WEBSITES\Neemo\NEWDESIGN_V1\NEWDESIGN\SwapNSales\obj\Debug\SwapNSales.dll
+G:\WEBSITES\Neemo\NEWDESIGN_V1\NEWDESIGN\SwapNSales\obj\Debug\SwapNSales.pdb

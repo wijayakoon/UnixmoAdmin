@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="Neemo.Admin.AdminMaster" %>
+
+<%@ Register src="../UserControls/UC_AdminHeader.ascx" tagname="UC_AdminHeader" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body>
+    <form runat="server">
+        <script type="text/javascript">
+            function Display(name) {
+                alert(name);
+            }    
+    </script>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div class="page" style="width:auto;">
+        <div class="header" style="width:auto;">
+            <div class="title">
+                <h1>
+                    NEEMO ADMIN MODULE</h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="../Admin/Login.aspx">Logout</asp:HyperLink>
+            </div>
+            <div class="clear hideSkiplink" style="width:auto;">
+                <uc1:UC_AdminHeader ID="UC_AdminHeader1" runat="server" />
+            </div>
+        </div>
+        <div class="main" style="width:auto;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>

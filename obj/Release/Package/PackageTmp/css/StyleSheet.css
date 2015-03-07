@@ -1,0 +1,35 @@
+﻿.contents
+{
+	color: #F0F0F0;
+	vertical-align: top;
+}
+.item
+{
+	margin: 20px;
+	font-family: "Myriad Pro";
+	font-size: 12pt;
+	color: #FF9933;
+	text-decoration: none;
+}
+.item:hover
+{
+	color: #FFFF00;
+}
+
+.items
+{
+	vertical-align: top;
+}
+
+.itemSep
+{
+	height: 10px;
+	width: 40px;
+}
+.buttons
+{
+	padding: 0px;
+	margin: 0px;
+	height: 21px;
+	font-size: xx-small;
+}

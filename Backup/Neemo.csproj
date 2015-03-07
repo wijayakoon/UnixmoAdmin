@@ -1,0 +1,1271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{428A7D5D-4362-4169-836D-3B899264B3C2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Neemo</RootNamespace>
+    <AssemblyName>Neemo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DesktopBuildPackageLocation>obj\Debug\Package\Neemo.zip</DesktopBuildPackageLocation>
+    <DeployIisAppPath>Default Web Site/Neemo_deploy</DeployIisAppPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>LIB\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\About.aspx" />
+    <Content Include="Admin\Badge_Edit.aspx" />
+    <Content Include="Admin\Badge_New.aspx" />
+    <Content Include="Admin\Badge_Search.aspx" />
+    <Content Include="Admin\BodyType_Edit.aspx" />
+    <Content Include="Admin\BodyType_New.aspx" />
+    <Content Include="Admin\BodyType_Search.aspx" />
+    <Content Include="Admin\Colour_Edit.aspx" />
+    <Content Include="Admin\Colour_New.aspx" />
+    <Content Include="Admin\Colour_Search.aspx" />
+    <Content Include="Admin\Condition_Edit.aspx" />
+    <Content Include="Admin\Condition_New.aspx" />
+    <Content Include="Admin\Condition_Search.aspx" />
+    <Content Include="Admin\Chassis_Edit.aspx" />
+    <Content Include="Admin\Chassis_New.aspx" />
+    <Content Include="Admin\Chassis_Search.aspx" />
+    <Content Include="Admin\Category_Edit.aspx" />
+    <Content Include="Admin\Category_New.aspx" />
+    <Content Include="Admin\Category_Search.aspx" />
+    <Content Include="Admin\CCRating._Edit.aspx" />
+    <Content Include="Admin\CCRating_New.aspx" />
+    <Content Include="Admin\CCRating_Search.aspx" />
+    <Content Include="Admin\Product_Update.aspx" />
+    <Content Include="Admin\Side_Edit.aspx" />
+    <Content Include="Admin\Side_New.aspx" />
+    <Content Include="Admin\Side_Search.aspx" />
+    <Content Include="Admin\Part_Edit.aspx" />
+    <Content Include="Admin\Product_Search.aspx" />
+    <Content Include="Admin\Feature_Edit.aspx" />
+    <Content Include="Admin\Feature_New.aspx" />
+    <Content Include="Admin\Feature_Search.aspx" />
+    <Content Include="Admin\Part_Search.aspx" />
+    <Content Include="Admin\Part_New.aspx" />
+    <Content Include="Admin\css\Admin.css" />
+    <Content Include="Admin\css\dcmegamenu.css" />
+    <Content Include="Admin\css\default.css" />
+    <Content Include="Admin\css\ezleftmenu.css" />
+    <Content Include="Admin\css\ie.css" />
+    <Content Include="Admin\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Admin\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Admin\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Admin\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Admin\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Admin\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Admin\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Admin\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Admin\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Admin\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Admin\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="Admin\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="Admin\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Admin\css\jquery-ui.css" />
+    <Content Include="Admin\css\jquery.fileupload-ui.css" />
+    <Content Include="Admin\css\jquery.selectbox.css" />
+    <Content Include="Admin\css\MainStyle.css" />
+    <Content Include="Admin\css\nivo-slider.css" />
+    <Content Include="Admin\css\pbar-ani.gif" />
+    <Content Include="Admin\css\Site.css" />
+    <Content Include="Admin\css\skins\black.css" />
+    <Content Include="Admin\css\skins\blue.css" />
+    <Content Include="Admin\css\skins\green.css" />
+    <Content Include="Admin\css\skins\grey.css" />
+    <Content Include="Admin\css\skins\images\arrow.png" />
+    <Content Include="Admin\css\skins\images\arrow_off.png" />
+    <Content Include="Admin\css\skins\images\arrow_on.png" />
+    <Content Include="Admin\css\skins\images\bg_black.png" />
+    <Content Include="Admin\css\skins\images\bg_blue.png" />
+    <Content Include="Admin\css\skins\images\bg_green.png" />
+    <Content Include="Admin\css\skins\images\bg_grey.png" />
+    <Content Include="Admin\css\skins\images\bg_light_blue.png" />
+    <Content Include="Admin\css\skins\images\bg_mega_hdr.png" />
+    <Content Include="Admin\css\skins\images\bg_mega_hdr_full.png" />
+    <Content Include="Admin\css\skins\images\bg_mega_hdr_on.png" />
+    <Content Include="Admin\css\skins\images\bg_orange.png" />
+    <Content Include="Admin\css\skins\images\bg_red.png" />
+    <Content Include="Admin\css\skins\images\bg_sub.png" />
+    <Content Include="Admin\css\skins\images\bg_sub_left.png" />
+    <Content Include="Admin\css\skins\images\bg_white.png" />
+    <Content Include="Admin\css\skins\light_blue.css" />
+    <Content Include="Admin\css\skins\orange.css" />
+    <Content Include="Admin\css\skins\red.css" />
+    <Content Include="Admin\css\skins\white.css" />
+    <Content Include="Admin\css\slider.css" />
+    <Content Include="Admin\css\StyleSheet.css" />
+    <Content Include="Admin\Js\application.js" />
+    <Content Include="Admin\Js\jquery-1.10.1.min.js" />
+    <Content Include="Admin\Js\jquery-1.4.3.min.js" />
+    <Content Include="Admin\Js\jquery-ui.min.js" />
+    <Content Include="Admin\Js\jquery.fileupload-ui.js" />
+    <Content Include="Admin\Js\jquery.fileupload.js" />
+    <Content Include="Admin\Js\jquery.iframe-transport.js" />
+    <Content Include="Admin\Js\jquery.min.js" />
+    <Content Include="Admin\Js\jquery.nivo.slider.js" />
+    <Content Include="Admin\Js\jquery.nivo.slider.pack.js" />
+    <Content Include="Admin\Js\jquery.tmpl.min.js" />
+    <Content Include="Admin\Js\json2.js" />
+    <Content Include="Admin\Product_New.aspx" />
+    <Content Include="Admin\Wreck_New.aspx" />
+    <Content Include="Admin\Wreck_Search.aspx" />
+    <Content Include="Admin\WheelBase_Edit.aspx" />
+    <Content Include="Admin\WheelBase_New.aspx" />
+    <Content Include="Admin\WheelBase_Search.aspx" />
+    <Content Include="Admin\Error.aspx" />
+    <Content Include="Admin\Engine_Edit.aspx" />
+    <Content Include="Admin\Engine_New.aspx" />
+    <Content Include="Admin\Engine_Search.aspx" />
+    <Content Include="Admin\Vehicle_Edit.aspx" />
+    <Content Include="Admin\Vehicle_New.aspx" />
+    <Content Include="Admin\Vehicle_Search.aspx" />
+    <Content Include="Admin\Series_Edit.aspx" />
+    <Content Include="Admin\Series_New.aspx" />
+    <Content Include="Admin\Series_Search.aspx" />
+    <Content Include="Admin\State_Edit.aspx" />
+    <Content Include="Admin\State_New.aspx" />
+    <Content Include="Admin\State_Search.aspx" />
+    <Content Include="Admin\Suburb_Edit.aspx" />
+    <Content Include="Admin\Suburb_New.aspx" />
+    <Content Include="Admin\Suburb_Search.aspx" />
+    <Content Include="Admin\Towing_Edit.aspx" />
+    <Content Include="Admin\Towing_New.aspx" />
+    <Content Include="Admin\Towing_Search.aspx" />
+    <Content Include="Admin\Model_Edit.aspx" />
+    <Content Include="Admin\Model_New.aspx" />
+    <Content Include="Admin\Model_Search.aspx" />
+    <Content Include="Admin\Power_Edit.aspx" />
+    <Content Include="Admin\Power_New.aspx" />
+    <Content Include="Admin\Power_Search.aspx" />
+    <Content Include="Admin\PPlateApprove_Edit.aspx" />
+    <Content Include="Admin\PPlateApprove_New.aspx" />
+    <Content Include="Admin\PPlateApprove_Search.aspx" />
+    <Content Include="Admin\Price_Edit.aspx" />
+    <Content Include="Admin\Price_New.aspx" />
+    <Content Include="Admin\Price_Search.aspx" />
+    <Content Include="Admin\Region_Edit.aspx" />
+    <Content Include="Admin\Region_New.aspx" />
+    <Content Include="Admin\Region_Search.aspx" />
+    <Content Include="Admin\Seat_Edit.aspx" />
+    <Content Include="Admin\Seat_New.aspx" />
+    <Content Include="Admin\Seat_Search.aspx" />
+    <Content Include="Admin\DriveType_Edit.aspx" />
+    <Content Include="Admin\DriveType_New.aspx" />
+    <Content Include="Admin\DriveType_Search.aspx" />
+    <Content Include="Admin\EngineSize_Edit.aspx" />
+    <Content Include="Admin\EngineSize_New.aspx" />
+    <Content Include="Admin\EngineSize_Search.aspx" />
+    <Content Include="Admin\FuelType_Edit.aspx" />
+    <Content Include="Admin\FuelType_New.aspx" />
+    <Content Include="Admin\FuelType_Search.aspx" />
+    <Content Include="Admin\GreenRating_Edit.aspx" />
+    <Content Include="Admin\GreenRating_New.aspx" />
+    <Content Include="Admin\GreenRating_Search.aspx" />
+    <Content Include="Admin\Induction_Edit.aspx" />
+    <Content Include="Admin\Induction_New.aspx" />
+    <Content Include="Admin\Induction_Search.aspx" />
+    <Content Include="Admin\KiloMeter_Edit.aspx" />
+    <Content Include="Admin\KiloMeter_New.aspx" />
+    <Content Include="Admin\KiloMeter_Search.aspx" />
+    <Content Include="Admin\ListingType_Edit.aspx" />
+    <Content Include="Admin\ListingType_New.aspx" />
+    <Content Include="Admin\ListingType_Search.aspx" />
+    <Content Include="Admin\Make_Edit.aspx" />
+    <Content Include="Admin\Make_New.aspx" />
+    <Content Include="Admin\Make_Search.aspx" />
+    <Content Include="Admin\Cylinder_Edit.aspx" />
+    <Content Include="Admin\Cylinder_New.aspx" />
+    <Content Include="Admin\Cylinder_Search.aspx" />
+    <Content Include="Admin\DealType_Edit.aspx" />
+    <Content Include="Admin\DealType_New.aspx" />
+    <Content Include="Admin\DealType_Search.aspx" />
+    <Content Include="Admin\Door_Edit.aspx" />
+    <Content Include="Admin\Door_New.aspx" />
+    <Content Include="Admin\Door_Search.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\Transmission_Edit.aspx" />
+    <Content Include="Admin\Transmission_New.aspx" />
+    <Content Include="Admin\Transmission_Search.aspx" />
+    <Content Include="Admin\Year_Edit.aspx" />
+    <Content Include="Admin\Year_New.aspx" />
+    <Content Include="Admin\Year_Search.aspx" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images_DBDriven\Brands\Image\TESTBRAND_TestImages.jpg" />
+    <Content Include="Images_DBDriven\Brands\Thumbnail\TESTBRAND_TestImages.jpg" />
+    <Content Include="Images_DBDriven\Products\_MB_Tighttoned.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\0772_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\19iI_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\1VHV_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\24Us_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\2D21_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\47ML_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\57Wj_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\5ZWJ_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\73N2_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\8Fsa_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\965H_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\9mV2_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\9Pqm_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\a1DP_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\B3f8_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\e0sd_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\G9iS_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\GtsH_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\jM20_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\KYv6_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\mtY4_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\oov1_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\Ovdi_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\Phx4_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\QZpC_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\rI23_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\ryj0_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\s91o_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\v2ib_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\VfyS_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\vsRk_TestImages.jpg" />
+    <Content Include="Images_DBDriven\UploadPhotos\vXG6_TestImages.jpg" />
+    <Content Include="LIB\AjaxControlToolkit.dll" />
+    <Content Include="Admin\AncapRating_New.aspx" />
+    <Content Include="Admin\AncapRating_Search.aspx" />
+    <Content Include="Admin\AncapRating_Edit.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="UserControls\ProcessingInProgressPanel.ascx" />
+    <Content Include="UserControls\UC_AdminHeader.ascx" />
+    <Content Include="UserControls\UC_Login.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Badge_Edit.aspx.cs">
+      <DependentUpon>Badge_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Badge_Edit.aspx.designer.cs">
+      <DependentUpon>Badge_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Badge_New.aspx.cs">
+      <DependentUpon>Badge_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Badge_New.aspx.designer.cs">
+      <DependentUpon>Badge_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Badge_Search.aspx.cs">
+      <DependentUpon>Badge_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Badge_Search.aspx.designer.cs">
+      <DependentUpon>Badge_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BodyType_Edit.aspx.cs">
+      <DependentUpon>BodyType_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BodyType_Edit.aspx.designer.cs">
+      <DependentUpon>BodyType_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BodyType_New.aspx.cs">
+      <DependentUpon>BodyType_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BodyType_New.aspx.designer.cs">
+      <DependentUpon>BodyType_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BodyType_Search.aspx.cs">
+      <DependentUpon>BodyType_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BodyType_Search.aspx.designer.cs">
+      <DependentUpon>BodyType_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Colour_Edit.aspx.cs">
+      <DependentUpon>Colour_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Colour_Edit.aspx.designer.cs">
+      <DependentUpon>Colour_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Colour_New.aspx.cs">
+      <DependentUpon>Colour_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Colour_New.aspx.designer.cs">
+      <DependentUpon>Colour_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Colour_Search.aspx.cs">
+      <DependentUpon>Colour_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Colour_Search.aspx.designer.cs">
+      <DependentUpon>Colour_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Condition_Edit.aspx.cs">
+      <DependentUpon>Condition_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Condition_Edit.aspx.designer.cs">
+      <DependentUpon>Condition_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Condition_New.aspx.cs">
+      <DependentUpon>Condition_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Condition_New.aspx.designer.cs">
+      <DependentUpon>Condition_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Condition_Search.aspx.cs">
+      <DependentUpon>Condition_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Condition_Search.aspx.designer.cs">
+      <DependentUpon>Condition_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Chassis_Edit.aspx.cs">
+      <DependentUpon>Chassis_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Chassis_Edit.aspx.designer.cs">
+      <DependentUpon>Chassis_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Chassis_New.aspx.cs">
+      <DependentUpon>Chassis_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Chassis_New.aspx.designer.cs">
+      <DependentUpon>Chassis_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Chassis_Search.aspx.cs">
+      <DependentUpon>Chassis_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Chassis_Search.aspx.designer.cs">
+      <DependentUpon>Chassis_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category_Edit.aspx.cs">
+      <DependentUpon>Category_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category_Edit.aspx.designer.cs">
+      <DependentUpon>Category_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category_New.aspx.cs">
+      <DependentUpon>Category_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category_New.aspx.designer.cs">
+      <DependentUpon>Category_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category_Search.aspx.cs">
+      <DependentUpon>Category_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category_Search.aspx.designer.cs">
+      <DependentUpon>Category_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CCRating._Edit.aspx.cs">
+      <DependentUpon>CCRating._Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CCRating._Edit.aspx.designer.cs">
+      <DependentUpon>CCRating._Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CCRating_New.aspx.cs">
+      <DependentUpon>CCRating_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CCRating_New.aspx.designer.cs">
+      <DependentUpon>CCRating_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CCRating_Search.aspx.cs">
+      <DependentUpon>CCRating_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CCRating_Search.aspx.designer.cs">
+      <DependentUpon>CCRating_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DataServices\Colours.cs" />
+    <Compile Include="Admin\DataServices\CCRatings.cs" />
+    <Compile Include="Admin\DataServices\Sides.cs" />
+    <Compile Include="Admin\Product_Update.aspx.cs">
+      <DependentUpon>Product_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_Update.aspx.designer.cs">
+      <DependentUpon>Product_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Side_Edit.aspx.cs">
+      <DependentUpon>Side_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Side_Edit.aspx.designer.cs">
+      <DependentUpon>Side_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Side_New.aspx.cs">
+      <DependentUpon>Side_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Side_New.aspx.designer.cs">
+      <DependentUpon>Side_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Side_Search.aspx.cs">
+      <DependentUpon>Side_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Side_Search.aspx.designer.cs">
+      <DependentUpon>Side_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DataServices\PartPrices.cs" />
+    <Compile Include="Admin\DataServices\PartFeatures.cs" />
+    <Compile Include="Admin\DataServices\Parts.cs" />
+    <Compile Include="Admin\DataServices\Products.cs" />
+    <Compile Include="Admin\Part_Edit.aspx.cs">
+      <DependentUpon>Part_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Part_Edit.aspx.designer.cs">
+      <DependentUpon>Part_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_Search.aspx.cs">
+      <DependentUpon>Product_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_Search.aspx.designer.cs">
+      <DependentUpon>Product_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DataServices\Features.cs" />
+    <Compile Include="Admin\Feature_Edit.aspx.cs">
+      <DependentUpon>Feature_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Feature_Edit.aspx.designer.cs">
+      <DependentUpon>Feature_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Feature_New.aspx.cs">
+      <DependentUpon>Feature_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Feature_New.aspx.designer.cs">
+      <DependentUpon>Feature_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Feature_Search.aspx.cs">
+      <DependentUpon>Feature_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Feature_Search.aspx.designer.cs">
+      <DependentUpon>Feature_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DataServices\Categories.cs" />
+    <Compile Include="Admin\Part_Search.aspx.cs">
+      <DependentUpon>Part_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Part_Search.aspx.designer.cs">
+      <DependentUpon>Part_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Part_New.aspx.cs">
+      <DependentUpon>Part_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Part_New.aspx.designer.cs">
+      <DependentUpon>Part_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DataServices\BodyTypes.cs" />
+    <Compile Include="Admin\DataServices\SqlHelper.cs" />
+    <Compile Include="Admin\DataServices\Wrecks.cs" />
+    <Compile Include="Admin\DataServices\Years.cs" />
+    <Compile Include="Admin\DataServices\Models.cs" />
+    <Compile Include="Admin\DataServices\Chassiss.cs" />
+    <Compile Include="Admin\DataServices\EngineSizes.cs" />
+    <Compile Include="Admin\DataServices\Engines.cs" />
+    <Compile Include="Admin\DataServices\WheelBases.cs" />
+    <Compile Include="Admin\DataServices\FuelTypes.cs" />
+    <Compile Include="Admin\DataServices\GetCommonMethods.cs" />
+    <Compile Include="Admin\DataServices\LookupCommon.cs" />
+    <Compile Include="Admin\DataServices\Makes.cs" />
+    <Compile Include="Admin\Handler.ashx.cs">
+      <DependentUpon>Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_New.aspx.cs">
+      <DependentUpon>Product_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_New.aspx.designer.cs">
+      <DependentUpon>Product_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SupportClasses\ApplicationConstants.cs" />
+    <Compile Include="Admin\SupportClasses\Common.cs" />
+    <Compile Include="Admin\SupportClasses\DBConnection.cs" />
+    <Compile Include="Admin\SupportClasses\ImageList.cs" />
+    <Compile Include="Admin\SupportClasses\ImageListHeader.cs" />
+    <Compile Include="Admin\Wreck_New.aspx.cs">
+      <DependentUpon>Wreck_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Wreck_New.aspx.designer.cs">
+      <DependentUpon>Wreck_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Wreck_Search.aspx.cs">
+      <DependentUpon>Wreck_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Wreck_Search.aspx.designer.cs">
+      <DependentUpon>Wreck_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WheelBase_Edit.aspx.cs">
+      <DependentUpon>WheelBase_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WheelBase_Edit.aspx.designer.cs">
+      <DependentUpon>WheelBase_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WheelBase_New.aspx.cs">
+      <DependentUpon>WheelBase_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WheelBase_New.aspx.designer.cs">
+      <DependentUpon>WheelBase_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WheelBase_Search.aspx.cs">
+      <DependentUpon>WheelBase_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WheelBase_Search.aspx.designer.cs">
+      <DependentUpon>WheelBase_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Engine_Edit.aspx.cs">
+      <DependentUpon>Engine_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Engine_Edit.aspx.designer.cs">
+      <DependentUpon>Engine_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Engine_New.aspx.cs">
+      <DependentUpon>Engine_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Engine_New.aspx.designer.cs">
+      <DependentUpon>Engine_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Engine_Search.aspx.cs">
+      <DependentUpon>Engine_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Engine_Search.aspx.designer.cs">
+      <DependentUpon>Engine_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Vehicle_Edit.aspx.cs">
+      <DependentUpon>Vehicle_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Vehicle_Edit.aspx.designer.cs">
+      <DependentUpon>Vehicle_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Vehicle_New.aspx.cs">
+      <DependentUpon>Vehicle_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Vehicle_New.aspx.designer.cs">
+      <DependentUpon>Vehicle_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Vehicle_Search.aspx.cs">
+      <DependentUpon>Vehicle_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Vehicle_Search.aspx.designer.cs">
+      <DependentUpon>Vehicle_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Series_Edit.aspx.cs">
+      <DependentUpon>Series_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Series_Edit.aspx.designer.cs">
+      <DependentUpon>Series_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Series_New.aspx.cs">
+      <DependentUpon>Series_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Series_New.aspx.designer.cs">
+      <DependentUpon>Series_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Series_Search.aspx.cs">
+      <DependentUpon>Series_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Series_Search.aspx.designer.cs">
+      <DependentUpon>Series_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\State_Edit.aspx.cs">
+      <DependentUpon>State_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\State_Edit.aspx.designer.cs">
+      <DependentUpon>State_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\State_New.aspx.cs">
+      <DependentUpon>State_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\State_New.aspx.designer.cs">
+      <DependentUpon>State_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\State_Search.aspx.cs">
+      <DependentUpon>State_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\State_Search.aspx.designer.cs">
+      <DependentUpon>State_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Suburb_Edit.aspx.cs">
+      <DependentUpon>Suburb_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Suburb_Edit.aspx.designer.cs">
+      <DependentUpon>Suburb_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Suburb_New.aspx.cs">
+      <DependentUpon>Suburb_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Suburb_New.aspx.designer.cs">
+      <DependentUpon>Suburb_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Suburb_Search.aspx.cs">
+      <DependentUpon>Suburb_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Suburb_Search.aspx.designer.cs">
+      <DependentUpon>Suburb_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Towing_Edit.aspx.cs">
+      <DependentUpon>Towing_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Towing_Edit.aspx.designer.cs">
+      <DependentUpon>Towing_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Towing_New.aspx.cs">
+      <DependentUpon>Towing_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Towing_New.aspx.designer.cs">
+      <DependentUpon>Towing_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Towing_Search.aspx.cs">
+      <DependentUpon>Towing_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Towing_Search.aspx.designer.cs">
+      <DependentUpon>Towing_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model_Edit.aspx.cs">
+      <DependentUpon>Model_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Model_Edit.aspx.designer.cs">
+      <DependentUpon>Model_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model_New.aspx.cs">
+      <DependentUpon>Model_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Model_New.aspx.designer.cs">
+      <DependentUpon>Model_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model_Search.aspx.cs">
+      <DependentUpon>Model_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Model_Search.aspx.designer.cs">
+      <DependentUpon>Model_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Power_Edit.aspx.cs">
+      <DependentUpon>Power_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Power_Edit.aspx.designer.cs">
+      <DependentUpon>Power_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Power_New.aspx.cs">
+      <DependentUpon>Power_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Power_New.aspx.designer.cs">
+      <DependentUpon>Power_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Power_Search.aspx.cs">
+      <DependentUpon>Power_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Power_Search.aspx.designer.cs">
+      <DependentUpon>Power_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PPlateApprove_Edit.aspx.cs">
+      <DependentUpon>PPlateApprove_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PPlateApprove_Edit.aspx.designer.cs">
+      <DependentUpon>PPlateApprove_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PPlateApprove_New.aspx.cs">
+      <DependentUpon>PPlateApprove_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PPlateApprove_New.aspx.designer.cs">
+      <DependentUpon>PPlateApprove_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PPlateApprove_Search.aspx.cs">
+      <DependentUpon>PPlateApprove_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PPlateApprove_Search.aspx.designer.cs">
+      <DependentUpon>PPlateApprove_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Price_Edit.aspx.cs">
+      <DependentUpon>Price_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Price_Edit.aspx.designer.cs">
+      <DependentUpon>Price_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Price_New.aspx.cs">
+      <DependentUpon>Price_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Price_New.aspx.designer.cs">
+      <DependentUpon>Price_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Price_Search.aspx.cs">
+      <DependentUpon>Price_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Price_Search.aspx.designer.cs">
+      <DependentUpon>Price_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Region_Edit.aspx.cs">
+      <DependentUpon>Region_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Region_Edit.aspx.designer.cs">
+      <DependentUpon>Region_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Region_New.aspx.cs">
+      <DependentUpon>Region_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Region_New.aspx.designer.cs">
+      <DependentUpon>Region_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Region_Search.aspx.cs">
+      <DependentUpon>Region_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Region_Search.aspx.designer.cs">
+      <DependentUpon>Region_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Seat_Edit.aspx.cs">
+      <DependentUpon>Seat_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Seat_Edit.aspx.designer.cs">
+      <DependentUpon>Seat_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Seat_New.aspx.cs">
+      <DependentUpon>Seat_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Seat_New.aspx.designer.cs">
+      <DependentUpon>Seat_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Seat_Search.aspx.cs">
+      <DependentUpon>Seat_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Seat_Search.aspx.designer.cs">
+      <DependentUpon>Seat_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DriveType_Edit.aspx.cs">
+      <DependentUpon>DriveType_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DriveType_Edit.aspx.designer.cs">
+      <DependentUpon>DriveType_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DriveType_New.aspx.cs">
+      <DependentUpon>DriveType_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DriveType_New.aspx.designer.cs">
+      <DependentUpon>DriveType_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DriveType_Search.aspx.cs">
+      <DependentUpon>DriveType_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DriveType_Search.aspx.designer.cs">
+      <DependentUpon>DriveType_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EngineSize_Edit.aspx.cs">
+      <DependentUpon>EngineSize_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EngineSize_Edit.aspx.designer.cs">
+      <DependentUpon>EngineSize_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EngineSize_New.aspx.cs">
+      <DependentUpon>EngineSize_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EngineSize_New.aspx.designer.cs">
+      <DependentUpon>EngineSize_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EngineSize_Search.aspx.cs">
+      <DependentUpon>EngineSize_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EngineSize_Search.aspx.designer.cs">
+      <DependentUpon>EngineSize_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FuelType_Edit.aspx.cs">
+      <DependentUpon>FuelType_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FuelType_Edit.aspx.designer.cs">
+      <DependentUpon>FuelType_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FuelType_New.aspx.cs">
+      <DependentUpon>FuelType_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FuelType_New.aspx.designer.cs">
+      <DependentUpon>FuelType_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FuelType_Search.aspx.cs">
+      <DependentUpon>FuelType_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FuelType_Search.aspx.designer.cs">
+      <DependentUpon>FuelType_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GreenRating_Edit.aspx.cs">
+      <DependentUpon>GreenRating_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GreenRating_Edit.aspx.designer.cs">
+      <DependentUpon>GreenRating_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GreenRating_New.aspx.cs">
+      <DependentUpon>GreenRating_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GreenRating_New.aspx.designer.cs">
+      <DependentUpon>GreenRating_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GreenRating_Search.aspx.cs">
+      <DependentUpon>GreenRating_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GreenRating_Search.aspx.designer.cs">
+      <DependentUpon>GreenRating_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Induction_Edit.aspx.cs">
+      <DependentUpon>Induction_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Induction_Edit.aspx.designer.cs">
+      <DependentUpon>Induction_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Induction_New.aspx.cs">
+      <DependentUpon>Induction_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Induction_New.aspx.designer.cs">
+      <DependentUpon>Induction_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Induction_Search.aspx.cs">
+      <DependentUpon>Induction_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Induction_Search.aspx.designer.cs">
+      <DependentUpon>Induction_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KiloMeter_Edit.aspx.cs">
+      <DependentUpon>KiloMeter_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KiloMeter_Edit.aspx.designer.cs">
+      <DependentUpon>KiloMeter_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KiloMeter_New.aspx.cs">
+      <DependentUpon>KiloMeter_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KiloMeter_New.aspx.designer.cs">
+      <DependentUpon>KiloMeter_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KiloMeter_Search.aspx.cs">
+      <DependentUpon>KiloMeter_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KiloMeter_Search.aspx.designer.cs">
+      <DependentUpon>KiloMeter_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListingType_Edit.aspx.cs">
+      <DependentUpon>ListingType_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ListingType_Edit.aspx.designer.cs">
+      <DependentUpon>ListingType_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListingType_New.aspx.cs">
+      <DependentUpon>ListingType_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ListingType_New.aspx.designer.cs">
+      <DependentUpon>ListingType_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListingType_Search.aspx.cs">
+      <DependentUpon>ListingType_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ListingType_Search.aspx.designer.cs">
+      <DependentUpon>ListingType_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Make_Edit.aspx.cs">
+      <DependentUpon>Make_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Make_Edit.aspx.designer.cs">
+      <DependentUpon>Make_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Make_New.aspx.cs">
+      <DependentUpon>Make_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Make_New.aspx.designer.cs">
+      <DependentUpon>Make_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Make_Search.aspx.cs">
+      <DependentUpon>Make_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Make_Search.aspx.designer.cs">
+      <DependentUpon>Make_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Cylinder_Edit.aspx.cs">
+      <DependentUpon>Cylinder_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Cylinder_Edit.aspx.designer.cs">
+      <DependentUpon>Cylinder_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Cylinder_New.aspx.cs">
+      <DependentUpon>Cylinder_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Cylinder_New.aspx.designer.cs">
+      <DependentUpon>Cylinder_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Cylinder_Search.aspx.cs">
+      <DependentUpon>Cylinder_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Cylinder_Search.aspx.designer.cs">
+      <DependentUpon>Cylinder_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DealType_Edit.aspx.cs">
+      <DependentUpon>DealType_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DealType_Edit.aspx.designer.cs">
+      <DependentUpon>DealType_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DealType_New.aspx.cs">
+      <DependentUpon>DealType_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DealType_New.aspx.designer.cs">
+      <DependentUpon>DealType_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DealType_Search.aspx.cs">
+      <DependentUpon>DealType_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DealType_Search.aspx.designer.cs">
+      <DependentUpon>DealType_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Door_Edit.aspx.cs">
+      <DependentUpon>Door_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Door_Edit.aspx.designer.cs">
+      <DependentUpon>Door_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Door_New.aspx.cs">
+      <DependentUpon>Door_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Door_New.aspx.designer.cs">
+      <DependentUpon>Door_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Door_Search.aspx.cs">
+      <DependentUpon>Door_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Door_Search.aspx.designer.cs">
+      <DependentUpon>Door_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DataServices\DbHandle.cs" />
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SupportClasses\Maintain_Services.cs" />
+    <Compile Include="Admin\SupportClasses\PhotoUpload.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SupportClasses\RegistrationDetails.cs" />
+    <Compile Include="Admin\Transmission_Edit.aspx.cs">
+      <DependentUpon>Transmission_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Transmission_Edit.aspx.designer.cs">
+      <DependentUpon>Transmission_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Transmission_New.aspx.cs">
+      <DependentUpon>Transmission_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Transmission_New.aspx.designer.cs">
+      <DependentUpon>Transmission_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Transmission_Search.aspx.cs">
+      <DependentUpon>Transmission_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Transmission_Search.aspx.designer.cs">
+      <DependentUpon>Transmission_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Year_Edit.aspx.cs">
+      <DependentUpon>Year_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Year_Edit.aspx.designer.cs">
+      <DependentUpon>Year_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Year_New.aspx.cs">
+      <DependentUpon>Year_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Year_New.aspx.designer.cs">
+      <DependentUpon>Year_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Year_Search.aspx.cs">
+      <DependentUpon>Year_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Year_Search.aspx.designer.cs">
+      <DependentUpon>Year_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin\AncapRating_New.aspx.cs">
+      <DependentUpon>AncapRating_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AncapRating_New.aspx.designer.cs">
+      <DependentUpon>AncapRating_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AncapRating_Search.aspx.cs">
+      <DependentUpon>AncapRating_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AncapRating_Search.aspx.designer.cs">
+      <DependentUpon>AncapRating_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AncapRating_Edit.aspx.cs">
+      <DependentUpon>AncapRating_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AncapRating_Edit.aspx.designer.cs">
+      <DependentUpon>AncapRating_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProcessingInProgressPanel.ascx.cs">
+      <DependentUpon>ProcessingInProgressPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProcessingInProgressPanel.ascx.designer.cs">
+      <DependentUpon>ProcessingInProgressPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_AdminHeader.ascx.cs">
+      <DependentUpon>UC_AdminHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_AdminHeader.ascx.designer.cs">
+      <DependentUpon>UC_AdminHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Login.ascx.cs">
+      <DependentUpon>UC_Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Login.ascx.designer.cs">
+      <DependentUpon>UC_Login.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images_DBDriven\LookupIcons\" />
+    <Folder Include="Images_DBDriven\News\" />
+    <Folder Include="Images_DBDriven\ProductTypes\" />
+    <Folder Include="Images_DBDriven\Product_Catalogues_DBDriven\" />
+    <Folder Include="Images_DBDriven\ThumbnailPhotos\" />
+    <Folder Include="Images_DBDriven\thumbnails\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Login.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Handler.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50595</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

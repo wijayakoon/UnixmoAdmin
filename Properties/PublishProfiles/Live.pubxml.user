@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://uzeromo.co.nz/admin</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Admin.Master">
+      <publishTime>02/09/2015 23:16:46</publishTime>
+    </File>
+    <File Include="AncapRating_Edit.aspx">
+      <publishTime>02/09/2015 23:16:55</publishTime>
+    </File>
+    <File Include="AncapRating_New.aspx">
+      <publishTime>02/09/2015 23:16:55</publishTime>
+    </File>
+    <File Include="AncapRating_Search.aspx">
+      <publishTime>02/09/2015 23:16:55</publishTime>
+    </File>
+    <File Include="Badge_Edit.aspx">
+      <publishTime>02/09/2015 23:16:55</publishTime>
+    </File>
+    <File Include="Badge_New.aspx">
+      <publishTime>02/09/2015 23:16:55</publishTime>
+    </File>
+    <File Include="Badge_Search.aspx">
+      <publishTime>02/09/2015 23:16:55</publishTime>
+    </File>
+    <File Include="BodyType_Edit.aspx">
+      <publishTime>02/09/2015 23:16:55</publishTime>
+    </File>
+    <File Include="BodyType_New.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="BodyType_Search.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="Category_Edit.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="Category_New.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="Category_Search.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="CCRating._Edit.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="CCRating_New.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="CCRating_Search.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="Chassis_Edit.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="Chassis_New.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="Chassis_Search.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="Colour_Edit.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="Colour_New.aspx">
+      <publishTime>02/09/2015 23:16:54</publishTime>
+    </File>
+    <File Include="Colour_Search.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="Condition_Edit.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="Condition_New.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="Condition_Search.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="Cylinder_Edit.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="Cylinder_New.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="Cylinder_Search.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="DealType_Edit.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="DealType_New.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="DealType_Search.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>02/09/2015 23:01:09</publishTime>
+    </File>
+    <File Include="Door_Edit.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="Door_New.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="Door_Search.aspx">
+      <publishTime>02/09/2015 23:16:53</publishTime>
+    </File>
+    <File Include="DriveType_Edit.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="DriveType_New.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="DriveType_Search.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="EngineSize_Edit.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="EngineSize_New.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="EngineSize_Search.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="Engine_Edit.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="Engine_New.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="Engine_Search.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="Error.aspx">
+      <publishTime>02/09/2015 23:16:46</publishTime>
+    </File>
+    <File Include="Feature_Edit.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="Feature_New.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="Feature_Search.aspx">
+      <publishTime>02/09/2015 23:16:52</publishTime>
+    </File>
+    <File Include="FuelType_Edit.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="FuelType_New.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="FuelType_Search.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/09/2015 23:01:09</publishTime>
+    </File>
+    <File Include="GreenRating_Edit.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="GreenRating_New.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="GreenRating_Search.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="Handler.ashx">
+      <publishTime>02/10/2015 01:08:53</publishTime>
+    </File>
+    <File Include="Induction_Edit.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="Induction_New.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="Induction_Search.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="KiloMeter_Edit.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="KiloMeter_New.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="KiloMeter_Search.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="ListingType_Edit.aspx">
+      <publishTime>02/09/2015 23:16:51</publishTime>
+    </File>
+    <File Include="ListingType_New.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="ListingType_Search.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Login.Master">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Make_Edit.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Make_New.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Make_Search.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Model_Edit.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Model_New.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Model_Search.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Part_Edit.aspx">
+      <publishTime>02/10/2015 00:57:45</publishTime>
+    </File>
+    <File Include="Part_New.aspx">
+      <publishTime>02/11/2015 00:33:16</publishTime>
+    </File>
+    <File Include="Part_Search.aspx">
+      <publishTime>02/09/2015 23:16:50</publishTime>
+    </File>
+    <File Include="Power_Edit.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="Power_New.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="Power_Search.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="PPlateApprove_Edit.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="PPlateApprove_New.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="PPlateApprove_Search.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="Price_Edit.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="Price_New.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="Price_Search.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="ProcessingInProgressPanel.ascx">
+      <publishTime>02/10/2015 00:09:02</publishTime>
+    </File>
+    <File Include="Product_New.aspx">
+      <publishTime>02/11/2015 02:11:57</publishTime>
+    </File>
+    <File Include="Product_Search.aspx">
+      <publishTime>02/09/2015 23:16:49</publishTime>
+    </File>
+    <File Include="Product_Update.aspx">
+      <publishTime>02/11/2015 02:11:10</publishTime>
+    </File>
+    <File Include="Region_Edit.aspx">
+      <publishTime>02/09/2015 23:16:48</publishTime>
+    </File>
+    <File Include="Region_New.aspx">
+      <publishTime>02/09/2015 23:16:48</publishTime>
+    </File>
+    <File Include="Region_Search.aspx">
+      <publishTime>02/09/2015 23:16:48</publishTime>
+    </File>
+    <File Include="Seat_Edit.aspx">
+      <publishTime>02/09/2015 23:16:48</publishTime>
+    </File>
+    <File Include="Seat_New.aspx">
+      <publishTime>02/09/2015 23:16:48</publishTime>
+    </File>
+    <File Include="Seat_Search.aspx">
+      <publishTime>02/09/2015 23:16:48</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

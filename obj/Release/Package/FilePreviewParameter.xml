@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Neemo" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^G:\\WEBSITES\\Neemo\\Neemo\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^G:\\WEBSITES\\Neemo\\Neemo\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ConnectionString-Web.config Connection String" description="ConnectionString Connection String used in web.config by the application to access the database." value="Data Source=FAMILY-PC\SQL2012;Initial Catalog=NNS_NEEMO;Persist Security Info=True;User ID=sa;Password=doordie" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="G:\\WEBSITES\\Neemo\\Neemo\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString']/@connectionString" />
+  </parameter>
+</parameters>
