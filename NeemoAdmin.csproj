@@ -50,6 +50,16 @@
       <HintPath>LIB\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WinForms\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -88,7 +98,9 @@
     <Content Include="CCRating._Edit.aspx" />
     <Content Include="CCRating_New.aspx" />
     <Content Include="CCRating_Search.aspx" />
+    <Content Include="Order_Progress.aspx" />
     <Content Include="Product_Update.aspx" />
+    <Content Include="ReportViewer.aspx" />
     <Content Include="Side_Edit.aspx" />
     <Content Include="Side_New.aspx" />
     <Content Include="Side_Search.aspx" />
@@ -462,12 +474,31 @@
     <Compile Include="DataServices\CCRatings.cs" />
     <Compile Include="DataServices\PartPhotos.cs" />
     <Compile Include="DataServices\Sides.cs" />
+    <Compile Include="Invoice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Invoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Progress.aspx.cs">
+      <DependentUpon>Order_Progress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order_Progress.aspx.designer.cs">
+      <DependentUpon>Order_Progress.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Product_Update.aspx.cs">
       <DependentUpon>Product_Update.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Product_Update.aspx.designer.cs">
       <DependentUpon>Product_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewer.aspx.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.aspx.designer.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Side_Edit.aspx.cs">
       <DependentUpon>Side_Edit.aspx</DependentUpon>
@@ -1242,9 +1273,23 @@
     <Content Include="Handler.ashx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Invoice.xsc">
+      <DependentUpon>Invoice.xsd</DependentUpon>
+    </Content>
+    <None Include="Invoice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Invoice.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Invoice.xss">
+      <DependentUpon>Invoice.xsd</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\File system.pubxml" />
     <None Include="Properties\PublishProfiles\Live.pubxml" />
     <None Include="Properties\PublishProfiles\NeemoAdmin.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SalesInvoice.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

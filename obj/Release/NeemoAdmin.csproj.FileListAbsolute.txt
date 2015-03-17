@@ -5,3 +5,14 @@ G:\WEBSITES\Neemo\Neemo\bin\AjaxControlToolkit.dll
 G:\WEBSITES\Neemo\Neemo\obj\Release\NeemoAdmin.dll
 G:\WEBSITES\Neemo\Neemo\obj\Release\NeemoAdmin.pdb
 G:\WEBSITES\Neemo\Neemo\obj\Release\NeemoAdmin.csprojResolveAssemblyReference.cache
+G:\WEBSITES\Neemo\UnixmoAdmin\bin\NeemoAdmin.dll.config
+G:\WEBSITES\Neemo\UnixmoAdmin\bin\NeemoAdmin.dll
+G:\WEBSITES\Neemo\UnixmoAdmin\bin\NeemoAdmin.pdb
+G:\WEBSITES\Neemo\UnixmoAdmin\bin\AjaxControlToolkit.dll
+G:\WEBSITES\Neemo\UnixmoAdmin\obj\Release\NeemoAdmin.dll
+G:\WEBSITES\Neemo\UnixmoAdmin\obj\Release\NeemoAdmin.pdb
+G:\WEBSITES\Neemo\UnixmoAdmin\obj\Release\RdlCompile.cache
+G:\WEBSITES\Neemo\UnixmoAdmin\obj\Release\RdlCompile.compiled
+G:\WEBSITES\Neemo\UnixmoAdmin\obj\Release\NeemoAdmin.csprojResolveAssemblyReference.cache
+G:\WEBSITES\Neemo\UnixmoAdmin\bin\Microsoft.ReportViewer.WebForms.DLL
+G:\WEBSITES\Neemo\UnixmoAdmin\bin\Microsoft.ReportViewer.WinForms.DLL
