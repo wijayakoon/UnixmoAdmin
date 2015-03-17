@@ -37,7 +37,7 @@ a:link, a:visited
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
-                        
+                         <asp:MenuItem NavigateUrl="~/Order_Progress.aspx" Text="Orders"/>
                         <asp:MenuItem Text="Lookups" Value="Lookups">
 
                            <asp:MenuItem Text="Makes" Value="Makes">
