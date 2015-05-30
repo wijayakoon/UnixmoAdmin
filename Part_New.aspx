@@ -191,16 +191,16 @@
         </tr>
         <tr valign="top">
             <td class="style3" bgcolor="#EFEFEF">
-                Details</td>
+                Key words</td>
             <td bgcolor="#EFEFEF">
-                <asp:TextBox ID="TextBox_Details" runat="server" TextMode="MultiLine" 
-                    Height="200px" Width="350px"></asp:TextBox>
+                <asp:TextBox ID="TextBox_Keywords" runat="server" TextMode="MultiLine" 
+                    Height="200px" Width="444px" MaxLength="8000"></asp:TextBox>
             </td>
             <td bgcolor="#EFEFEF" class="style10">
                 Description</td>
             <td bgcolor="#EFEFEF">
                 <asp:TextBox ID="TextBox_Description" runat="server" TextMode="MultiLine" 
-                    Height="200px" Width="350px"></asp:TextBox>
+                    Height="200px" Width="350px" MaxLength="8000"></asp:TextBox>
             </td>
         </tr>
           <tr valign="top">
@@ -253,9 +253,9 @@
                 <asp:CheckBox ID="chk_Active" runat="server" Checked="True" />
             </td>
             <td bgcolor="#EFEFEF" class="style9">
-                </td>
+                &nbsp;</td>
             <td bgcolor="#EFEFEF" class="style2">
-                </td>
+                &nbsp;</td>
         </tr>
         </TABLE>
             <table align="left"  style="vertical-align:top; width: 1000px;">

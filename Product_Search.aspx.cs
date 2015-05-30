@@ -30,17 +30,8 @@ namespace NeemoAdmin
         private void BindDataGrid()
         { 
             Products product = new Products();
-            //SqlParameter[] SProcParamArray = new SqlParameter[5];
-            //SProcParamArray[0] = new SqlParameter("@ProductID", ProductID);
-            //SProcParamArray[1] = new SqlParameter("@WreckID", WreckID);
-            //SProcParamArray[2] = new SqlParameter("@PartID", PartID);
-            //SProcParamArray[3] = new SqlParameter("@WreckNo", Wreck.WreckNo);
-            //SProcParamArray[4] = new SqlParameter("@Part", Part.Part);
-            //SProcParamArray[5] = new SqlParameter("@Status", Status);
-            //SProcParamArray[6] = new SqlParameter("@WreckNo", Wreck.WreckNo);
-            //SProcParamArray[7] = new SqlParameter("@Usage", Usage); 
-            
-
+            product.Part.Part = TextBox_Search.Text;
+            product.Usage = "SearchByName";
             gv_Products.DataSource = product.Find();
             gv_Products.DataBind();
 
@@ -60,10 +51,7 @@ namespace NeemoAdmin
 
         protected void btn_Search_Click(object sender, EventArgs e)
         {
-          SqlDataSource1.SelectCommand= string.Format("SELECT ProductID,Product,Active,Image,EffectiveDateFrom,EffectiveDateTo,CreatedDateTime,DeletedDateTime FROM Product Where Product Like '%{0}%'  ORDER BY [Product]",TextBox_Search.Text);
-          SqlDataSource1.DataBind();
-          gv_Products.DataBind();
-
+            BindDataGrid();
         }
 
         protected void btn_New_Click(object sender, EventArgs e)

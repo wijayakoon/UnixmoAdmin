@@ -85,15 +85,6 @@ namespace NeemoAdmin {
         protected global::System.Web.UI.WebControls.TextBox TextBox_ShortDescription;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
-        /// <summary>
         /// SqlDataSource5 control.
         /// </summary>
         /// <remarks>
@@ -103,13 +94,13 @@ namespace NeemoAdmin {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource5;
         
         /// <summary>
-        /// TextBox_Details control.
+        /// TextBox_Keywords control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_Details;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Keywords;
         
         /// <summary>
         /// TextBox_Description control.

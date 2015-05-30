@@ -25,8 +25,9 @@ namespace NeemoAdmin.DataServices
         int _PartPhotoID;
         int _Quantity;
         double _Price;
-        string _PhotoName;        
+        string _PhotoName;
         string _ShortDescription;
+        string _KeyWords;
         string _Description;
         int _Height;
         int _Width;
@@ -49,8 +50,9 @@ namespace NeemoAdmin.DataServices
         public int Quantity { get { return _Quantity; } set { _Quantity = value; } }
         public double Price { get { return _Price; } set { _Price = value; } }
         public string PhotoName { get { return _PhotoName; } set { _PhotoName = value; } }
-        
+
         public string ShortDescription { get { return _ShortDescription; } set { _ShortDescription = value; } }
+        public string KeyWords { get { return _KeyWords; } set { _KeyWords = value; } }
         public string Description { get { return _Description; } set { _Description = value; } }
         public int Height { get { return _Height; } set { _Height = value; } }
         public int Width { get { return _Width; } set { _Width = value; } }
@@ -177,7 +179,8 @@ namespace NeemoAdmin.DataServices
                     Price= Convert.ToDouble(dr["Price"].ToString() == null ?"0.00" : dr["Price"].ToString());
                     PhotoName= dr["PhotoName"].ToString() == null ? "" : dr["PhotoName"].ToString();
                     CreatedDateTime= Convert.ToDateTime(dr["CreatedDateTime"].ToString() == null ? "" : dr["CreatedDateTime"].ToString());
-                    ShortDescription= (dr["ShortDescription"].ToString()) == null ? "" : dr["ShortDescription"].ToString();
+                    ShortDescription = (dr["ShortDescription"].ToString()) == null ? "" : dr["ShortDescription"].ToString();
+                    KeyWords = (dr["KeyWords"].ToString()) == null ? "" : dr["KeyWords"].ToString();
                     Description= (dr["Description"].ToString()) == null ? "" : dr["Description"].ToString();
                     Height= Convert.ToInt16(dr["Height"].ToString() == null ? "0" : dr["Height"].ToString());
                     Width= Convert.ToInt16(dr["Width"].ToString() == null ? "0" : dr["Width"].ToString());

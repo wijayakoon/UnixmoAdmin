@@ -116,23 +116,25 @@
                                     <asp:ButtonField Text="Update" CommandName="Select" />
                                      <asp:BoundField DataField="GUID" HeaderText="Invoice GUID" 
                                         SortExpression="GUID" Visible="true" />
-                                        <asp:BoundField DataField="OrderHeaderID" HeaderText="Invoice No" 
-                                        InsertVisible="False" ReadOnly="True" SortExpression="OrderHeaderID" 
+                                        <asp:BoundField DataField="InvoiceNumber" HeaderText="Invoice No" 
+                                        InsertVisible="False" ReadOnly="True" SortExpression="InvoiceNumber" 
                                         Visible="true" ><HeaderStyle Width="70px" /></asp:BoundField>
                                         <asp:BoundField DataField="Billing_Email" HeaderText="Billing_Email" 
                                         SortExpression="Billing_Email" Visible="true" />
                                         <asp:BoundField DataField="OrderStatusID" HeaderText="OrderStatusID" 
                                         SortExpression="OrderStatusID" Visible="false" />
                                       <asp:BoundField DataField="orderstatus" HeaderText="Orderstatus" FooterStyle-HorizontalAlign="Left"
-                                        SortExpression="orderstatus" />
+                                        SortExpression="orderstatus" >
+<FooterStyle HorizontalAlign="Left"></FooterStyle>
+                                    </asp:BoundField>
                                     <asp:BoundField DataField="RegistrationID" HeaderText="RegistrationID" 
                                         SortExpression="RegistrationID" Visible="False" />
                                     <asp:BoundField DataField="RecordSourceIP" HeaderText="RecordSourceIP" 
                                         SortExpression="RecordSourceIP" Visible="False" />
-                                    <asp:BoundField DataField="TotalAmount" HeaderText="TotalAmount" 
-                                        SortExpression="TotalAmount" />
+                                    <asp:BoundField DataField="TotalInvoice" HeaderText="TotalInvoice" 
+                                        SortExpression="TotalInvoice" DataFormatString="{0:c}"/>
                                     <asp:BoundField DataField="TaxTotal" HeaderText="TaxTotal" 
-                                        SortExpression="TaxTotal" Visible="False" />
+                                        SortExpression="TaxTotal" Visible="False" DataFormatString="{0:c}"/>
                                     <asp:BoundField DataField="ShippingCharges" HeaderText="ShippingCharges" 
                                         SortExpression="ShippingCharges" Visible="False" />
                                     <asp:BoundField DataField="Handlingcharges" HeaderText="Handlingcharges" 
@@ -210,7 +212,7 @@
                 <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                     
-                    SelectCommand="SELECT Oh.*,os.orderstatus FROM [OrderHeader] OH
+                    SelectCommand="SELECT Oh.*,oh.Totalamount + oh.TaxTotal TotalInvoice,os.orderstatus FROM [OrderHeader] OH
 inner join OrderStatus OS on OH.OrderstatusID= Os.OrderstatusID
 WHERE (OH.OrderstatusID = @OrderstatusID)">
                     <SelectParameters>

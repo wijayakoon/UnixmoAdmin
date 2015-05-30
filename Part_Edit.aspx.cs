@@ -54,16 +54,15 @@ namespace NeemoAdmin
                     txt_PartNo.Text = ((string)row["PartNo"].ToString());
                     TextBox_Description.Text = ((string)row["Description"].ToString());
                     TextBox_ShortDescription.Text = ((string)row["ShortDescription"].ToString());
+                    TextBox_Keywords.Text = ((string)row["Keywords"].ToString());
                     txt_PartNo.Text = ((string)row["PartNo"].ToString());
                     TextBox_Name.Text = ((string)row["Part"].ToString());
-                    TextBox_Details.Text = ((string)row["Part"].ToString());
+                    //TextBox_Details.Text = ((string)row["Part"].ToString());
                     txt_Height.Text = ((string)row["Height"].ToString());
                     txt_Width.Text = ((string)row["Width"].ToString());
                     txt_Length.Text = ((string)row["Length"].ToString());
                     txt_Weight.Text = ((string)row["Weight"].ToString());
-                    
-
-                   
+                    chk_Active.Checked = (bool)row["Active"];
                                      
 
                     if (Request.QueryString["PartID"] != null)
@@ -571,6 +570,7 @@ namespace NeemoAdmin
                 sqlCmd.Parameters.AddWithValue("@ColourID", Convert.ToInt16(drp_Colour.SelectedValue.ToString()));
                 sqlCmd.Parameters.AddWithValue("@SideID", Convert.ToInt16(drp_Side.SelectedValue.ToString()));
                 sqlCmd.Parameters.AddWithValue("@ShortDescription", TextBox_ShortDescription.Text);
+                sqlCmd.Parameters.AddWithValue("@Keywords", TextBox_Keywords.Text);
                 sqlCmd.Parameters.AddWithValue("@Description", TextBox_Description.Text);
                 sqlCmd.Parameters.AddWithValue("@Part", TextBox_Name.Text);
                 sqlCmd.Parameters.AddWithValue("@PartNo", txt_PartNo.Text);

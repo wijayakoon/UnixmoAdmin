@@ -37,7 +37,7 @@ namespace NeemoAdmin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl UC_AdminHeader1;
+        protected global::NeemoAdmin.UC_AdminHeader UC_AdminHeader1;
         
         /// <summary>
         /// ScriptManager1 control.

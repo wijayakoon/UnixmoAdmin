@@ -166,10 +166,7 @@
         </tr>
         <tr valign="top">
             <td class="style4" bgcolor="#EFEFEF">
-                Details<asp:RequiredFieldValidator 
-                    ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox_Details" 
-                    ErrorMessage="Details Required" ForeColor="#CC0000" ValidationGroup="save">*</asp:RequiredFieldValidator>
-                <asp:SqlDataSource ID="SqlDataSource5" runat="server" 
+                Key words<asp:SqlDataSource ID="SqlDataSource5" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                     SelectCommand="SELECT * FROM Part WHERE (PartID = @PartID)">
                     <SelectParameters>
@@ -179,14 +176,14 @@
                 </asp:SqlDataSource>
             </td>
             <td bgcolor="#EFEFEF">
-                <asp:TextBox ID="TextBox_Details" runat="server" TextMode="MultiLine" 
-                    Height="200px" Width="444px"></asp:TextBox>
+                <asp:TextBox ID="TextBox_Keywords" runat="server" TextMode="MultiLine" 
+                    Height="200px" Width="444px" MaxLength="8000"></asp:TextBox>
             </td>
             <td bgcolor="#EFEFEF">
                 Description</td>
             <td bgcolor="#EFEFEF">
                 <asp:TextBox ID="TextBox_Description" runat="server" TextMode="MultiLine" 
-                    Height="200px" Width="444px"></asp:TextBox>
+                    Height="200px" Width="444px" MaxLength="8000"></asp:TextBox>
             </td>
         </tr>
         <tr valign="top">
@@ -217,7 +214,7 @@
                 <asp:CheckBox ID="chk_Active" runat="server" Checked="True" />
             </td>
             <td bgcolor="#EFEFEF">
-                &nbsp;</td>
+                Key words</td>
             <td bgcolor="#EFEFEF">
                 &nbsp;</td>
         </tr>

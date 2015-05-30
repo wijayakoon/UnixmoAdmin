@@ -579,6 +579,7 @@ namespace NeemoAdmin
                 sqlCmd.Parameters.AddWithValue("@ColourID", Convert.ToInt16(drp_Colour.SelectedValue.ToString()));
                 sqlCmd.Parameters.AddWithValue("@SideId", Convert.ToInt16(drp_Side.SelectedValue.ToString()));
                 sqlCmd.Parameters.AddWithValue("@ShortDescription", TextBox_ShortDescription.Text);
+                sqlCmd.Parameters.AddWithValue("@Keywords", TextBox_Keywords.Text);
                 sqlCmd.Parameters.AddWithValue("@Description", TextBox_Description.Text);
                 sqlCmd.Parameters.AddWithValue("@Part", TextBox_Name.Text);
                 sqlCmd.Parameters.AddWithValue("@PartNo", txt_PartNo.Text);
