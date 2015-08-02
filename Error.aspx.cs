@@ -11,7 +11,7 @@ namespace NeemoAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //TextBox1.Text = Session["Error"].ToString();
+            TextBox1.Text = Session["Error"].ToString();
         }
     }
 }

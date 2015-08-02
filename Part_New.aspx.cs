@@ -673,7 +673,7 @@ namespace NeemoAdmin
             catch (Exception e)
             {
 
-                Response.Redirect("/Error.aspx");
+                Session["Error"] = e.StackTrace.ToString(); Response.Redirect("/Error.aspx");
             }
             //Response.Redirect("Product_New.aspx");
         }

@@ -640,7 +640,7 @@ namespace NeemoAdmin
             //    catch (Exception e)
             //    {
 
-            //        Response.Redirect("/Error.aspx");
+            //        Session["Error"] = e.StackTrace.ToString(); Response.Redirect("/Error.aspx");
             //    }
             //}
             protected void Button_Reset_Click(object sender, EventArgs e)
@@ -817,7 +817,7 @@ namespace NeemoAdmin
                 catch (Exception e)
                 {
 
-                    Response.Redirect("/Error.aspx");
+                    Session["Error"] = e.StackTrace.ToString(); Response.Redirect("/Error.aspx");
                 }
 
             }
@@ -870,7 +870,7 @@ namespace NeemoAdmin
                 catch (Exception e)
                 {
 
-                    Response.Redirect("/Error.aspx");
+                    Session["Error"] = e.StackTrace.ToString(); Response.Redirect("/Error.aspx");
                 }
 
             }
@@ -917,7 +917,7 @@ namespace NeemoAdmin
                 catch (Exception e)
                 {
 
-                    Response.Redirect("/Error.aspx");
+                    Session["Error"] = e.StackTrace.ToString(); Response.Redirect("/Error.aspx");
                 }
 
             }

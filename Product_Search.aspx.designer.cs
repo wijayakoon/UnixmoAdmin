@@ -40,7 +40,7 @@ namespace NeemoAdmin {
         protected global::System.Web.UI.WebControls.Button btn_New;
         
         /// <summary>
-        /// gv_Products control.
+        /// gv_Provider control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
@@ -49,12 +49,12 @@ namespace NeemoAdmin {
         protected global::System.Web.UI.WebControls.GridView gv_Products;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// SqlDataSourceProviders control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceProviders;
     }
 }

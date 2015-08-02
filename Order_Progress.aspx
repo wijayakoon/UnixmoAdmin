@@ -9,9 +9,8 @@
         {
             width: 133px;
         }
-        .style4
-        {
-            height: 59px;
+        .style4 {
+            G: \WEBSITES\Neemo\UnixmoAdmin\Images\invoicelogo.PNG height: 59px;
             color: #FFFFFF;
         }
         .style5

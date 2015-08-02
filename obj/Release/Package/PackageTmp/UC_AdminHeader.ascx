@@ -230,6 +230,31 @@ a:link, a:visited
                                 <asp:MenuItem NavigateUrl="~/Feature_Search.aspx" Text="Search &amp; Edit" 
                                     Value="Search &amp; Edit"></asp:MenuItem>
                             </asp:MenuItem>
+
+                            <asp:MenuItem NavigateUrl="~/ProviderType_Search.aspx" Text="ProviderTypes" 
+                                Value="ProviderTypes">
+                                <asp:MenuItem NavigateUrl="~/ProviderType_New.aspx" Text="New" Value="New">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ProviderType_Search.aspx" Text="Search &amp; Edit" 
+                                    Value="Search &amp; Edit"></asp:MenuItem>
+                            </asp:MenuItem>
+
+                            <asp:MenuItem NavigateUrl="~/ServiceType_Search.aspx" Text="ServiceTypes" 
+                                Value="ServiceTypes">
+                                <asp:MenuItem NavigateUrl="~/ServiceType_New.aspx" Text="New" Value="New">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ServiceType_Search.aspx" Text="Search &amp; Edit" 
+                                    Value="Search &amp; Edit"></asp:MenuItem>
+                            </asp:MenuItem>
+
+                            <asp:MenuItem NavigateUrl="~/DisplayOrder_Search.aspx" Text="DisplayOrder Types" 
+                                Value="DisplayOrders">
+                                <asp:MenuItem NavigateUrl="~/DisplayOrder_New.aspx" Text="New" Value="New">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/DisplayOrder_Search.aspx" Text="Search &amp; Edit" 
+                                    Value="Search &amp; Edit"></asp:MenuItem>
+                            </asp:MenuItem>
+
                             <asp:MenuItem Text="Suburbs" Value="Suburbs">
                                 <asp:MenuItem NavigateUrl="Suburb_New.aspx" Text="New" Value="New">
                                 </asp:MenuItem>
@@ -252,6 +277,11 @@ a:link, a:visited
                          <asp:MenuItem Text="Products" Value="Products">
                                 <asp:MenuItem Text="New" Value="New" NavigateUrl="Product_New.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Search and Edit" Value="Search and Edit"  NavigateUrl="Product_Search.aspx"></asp:MenuItem>
+                            </asp:MenuItem>      
+                        
+                         <asp:MenuItem Text="Provider" Value="Provider">
+                                <asp:MenuItem Text="New" Value="New" NavigateUrl="Provider_New.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Search and Edit" Value="Search and Edit"  NavigateUrl="Provider_Search.aspx"></asp:MenuItem>
                             </asp:MenuItem>        
                     </Items>
                 </asp:Menu>

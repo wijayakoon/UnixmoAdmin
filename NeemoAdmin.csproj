@@ -78,6 +78,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Badge_Edit.aspx" />
+    <Content Include="geo.html" />
+    <Content Include="Provider_Edit.aspx" />
+    <Content Include="Provider_New.aspx" />
+    <Content Include="Provider_Search.aspx" />
+    <Content Include="DisplayOrder_Edit.aspx" />
+    <Content Include="ServiceType_Edit.aspx" />
+    <Content Include="ProviderType_Edit.aspx" />
+    <Content Include="DisplayOrder_New.aspx" />
+    <Content Include="ServiceType_New.aspx" />
+    <Content Include="ProviderType_New.aspx" />
+    <Content Include="DisplayOrder_Search.aspx" />
+    <Content Include="ServiceType_Search.aspx" />
+    <Content Include="ProviderType_Search.aspx" />
+    <Content Include="DisplayOrder.aspx" />
     <Content Include="Badge_New.aspx" />
     <Content Include="Badge_Search.aspx" />
     <Content Include="BodyType_Edit.aspx" />
@@ -98,6 +112,7 @@
     <Content Include="CCRating._Edit.aspx" />
     <Content Include="CCRating_New.aspx" />
     <Content Include="CCRating_Search.aspx" />
+    <Content Include="Images\invoicelogo.PNG" />
     <Content Include="Order_Progress.aspx" />
     <Content Include="Product_Update.aspx" />
     <Content Include="ReportViewer.aspx" />
@@ -175,6 +190,7 @@
     <Content Include="Js\jquery.tmpl.min.js" />
     <Content Include="Js\json2.js" />
     <Content Include="Product_New.aspx" />
+    <Content Include="UC_AddressAutocomplete.ascx" />
     <Content Include="Wreck_New.aspx" />
     <Content Include="Wreck_Search.aspx" />
     <Content Include="WheelBase_Edit.aspx" />
@@ -329,6 +345,101 @@
     </Compile>
     <Compile Include="Badge_Edit.aspx.designer.cs">
       <DependentUpon>Badge_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataServices\Providers.cs" />
+    <Compile Include="Provider_Edit.aspx.cs">
+      <DependentUpon>Provider_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Provider_Edit.aspx.designer.cs">
+      <DependentUpon>Provider_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Provider_New.aspx.cs">
+      <DependentUpon>Provider_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Provider_New.aspx.designer.cs">
+      <DependentUpon>Provider_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Provider_Search.aspx.cs">
+      <DependentUpon>Provider_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Provider_Search.aspx.designer.cs">
+      <DependentUpon>Provider_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataServices\ServiceTypes.cs" />
+    <Compile Include="DataServices\ProviderTypes.cs" />
+    <Compile Include="DataServices\DisplayOrders.cs" />
+    <Compile Include="DisplayOrder_Edit.aspx.cs">
+      <DependentUpon>DisplayOrder_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayOrder_Edit.aspx.designer.cs">
+      <DependentUpon>DisplayOrder_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType_Edit.aspx.cs">
+      <DependentUpon>ServiceType_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceType_Edit.aspx.designer.cs">
+      <DependentUpon>ServiceType_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderType_Edit.aspx.cs">
+      <DependentUpon>ProviderType_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProviderType_Edit.aspx.designer.cs">
+      <DependentUpon>ProviderType_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayOrder_New.aspx.cs">
+      <DependentUpon>DisplayOrder_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayOrder_New.aspx.designer.cs">
+      <DependentUpon>DisplayOrder_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType_New.aspx.cs">
+      <DependentUpon>ServiceType_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceType_New.aspx.designer.cs">
+      <DependentUpon>ServiceType_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderType_New.aspx.cs">
+      <DependentUpon>ProviderType_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProviderType_New.aspx.designer.cs">
+      <DependentUpon>ProviderType_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayOrder_Search.aspx.cs">
+      <DependentUpon>DisplayOrder_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayOrder_Search.aspx.designer.cs">
+      <DependentUpon>DisplayOrder_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType_Search.aspx.cs">
+      <DependentUpon>ServiceType_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceType_Search.aspx.designer.cs">
+      <DependentUpon>ServiceType_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderType_Search.aspx.cs">
+      <DependentUpon>ProviderType_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProviderType_Search.aspx.designer.cs">
+      <DependentUpon>ProviderType_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayOrder.aspx.cs">
+      <DependentUpon>DisplayOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayOrder.aspx.designer.cs">
+      <DependentUpon>DisplayOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="Badge_New.aspx.cs">
       <DependentUpon>Badge_New.aspx</DependentUpon>
@@ -604,6 +715,13 @@
     <Compile Include="SupportClasses\DBConnection.cs" />
     <Compile Include="SupportClasses\ImageList.cs" />
     <Compile Include="SupportClasses\ImageListHeader.cs" />
+    <Compile Include="UC_AddressAutocomplete.ascx.cs">
+      <DependentUpon>UC_AddressAutocomplete.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC_AddressAutocomplete.ascx.designer.cs">
+      <DependentUpon>UC_AddressAutocomplete.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Wreck_New.aspx.cs">
       <DependentUpon>Wreck_New.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1306,7 +1424,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50595</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:5555/Admin/</IISUrl>
+          <IISUrl>http://localhost:5555/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

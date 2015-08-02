@@ -117,7 +117,7 @@ namespace NeemoAdmin
                             lbl_Warning.Text = "";
                             if (Session["LastPage"] == null)
                             {
-                                Response.Redirect("Default.aspx");
+                                Response.Redirect("~/Default.aspx");
                             }
 
 
