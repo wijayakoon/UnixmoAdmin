@@ -26,10 +26,19 @@ namespace NeemoAdmin
         {
             if (!IsPostBack)
             {
-                PopulateDll();
+                if (Request.QueryString["ProviderID"] == null)
+                {
+                    PopulateDllNew();
                 Session["ServiceTypeList"] = null;
                 Session["ProviderTypeList"] = null;
+                }
                 
+                else
+                {
+                    PopulateDllModify();
+                    PopulateProvider();
+                
+                }
 
             }
 
@@ -43,11 +52,13 @@ namespace NeemoAdmin
                 if (!IsPostBack) { BindDataProviderTypes(); BindDataServiceTypes(); }
 
             }
-
-           
-            
-            
         }
+
+        private void PopulateProvider()
+        { 
+        
+        }
+
 
         protected void btn_Upload_Click(object sender, EventArgs e)
         {
@@ -482,12 +493,21 @@ namespace NeemoAdmin
         //}
 
 
-        protected void PopulateDll()
+        protected void PopulateDllNew()
         {
             //Categories categories = new Categories(); categories.PopulateDllAll(drp_Category);
             ProviderTypes ProviderTypes = new ProviderTypes(); ProviderTypes.PopulateDllAll(drp_ProviderTypes);
             ServiceTypes ServiceTypes = new ServiceTypes(); ServiceTypes.PopulateDllAll(drp_ServiceTypes);
             
+        }
+
+
+        protected void PopulateDllModify()
+        {
+            //Categories categories = new Categories(); categories.PopulateDllAll(drp_Category);
+            ProviderTypes ProviderTypes = new ProviderTypes(); ProviderTypes.PopulateDllAll(drp_ProviderTypes);
+            ServiceTypes ServiceTypes = new ServiceTypes(); ServiceTypes.PopulateDllAll(drp_ServiceTypes);
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)

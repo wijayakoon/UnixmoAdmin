@@ -39,12 +39,12 @@ namespace NeemoAdmin
                     lbl_BillingPostCode.Text = row["Billing_PostCode"].ToString();
                     lbl_InvoiceDate.Text = row["DateCreated"].ToString();
 
-                    lbl_ShippingCharges.Text = string.Format("{0:#.00}", Convert.ToDecimal(row["ShippingCharges"].ToString()));
-                    lbl_Tax.Text = string.Format("{0:#.00}", Convert.ToDecimal(row["TaxTotal"].ToString()));
-                    lbl_Total.Text = string.Format("{0:#.00}", Convert.ToDecimal(row["TotalAmount"].ToString()));
+                    lbl_ShippingCharges.Text = string.Format("{0:#,##0.##}", Convert.ToDecimal(row["ShippingCharges"].ToString()));
+                    lbl_Tax.Text = string.Format("{0:#,##0.##}", Convert.ToDecimal(row["TaxTotal"].ToString()));
+                    lbl_Total.Text = string.Format("{0:#,##0.##}", Convert.ToDecimal(row["TotalAmount"].ToString()) + Convert.ToDecimal(row["TaxTotal"].ToString()));
 
-                    lblNetTotal.Text = (Convert.ToDouble(lbl_Total.Text) - Convert.ToDouble(lbl_Tax.Text) - (Convert.ToDouble(lbl_ShippingCharges.Text))).ToString();
-                    lblNetTotal.Text = string.Format("{0:#.00}", Convert.ToDecimal(lblNetTotal.Text));
+                    lblNetTotal.Text = (Convert.ToDecimal(row["TotalAmount"].ToString()).ToString()); //- Convert.ToDouble(lbl_Tax.Text) - (Convert.ToDouble(lbl_ShippingCharges.Text))).ToString();
+                    lblNetTotal.Text = string.Format("{0:#,##0.##}", Convert.ToDecimal(lblNetTotal.Text));
 
                     //lbl_ShippingCharges.Text = Convert.ToDecimal(row["ShippingCharges"]).ToString ("#.##");
                     //lbl_Tax.Text =Convert.ToDecimal(row["TaxTotal"]).ToString ("#.##");
