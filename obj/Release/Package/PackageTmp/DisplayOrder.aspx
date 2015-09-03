@@ -154,10 +154,10 @@ where GUID = @OrderHeaderid">
                         <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" >
                         <ItemStyle Width="100px" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice" SortExpression="UnitPrice" >
+                        <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice" SortExpression="UnitPrice" DataFormatString="{0:#,##0.##}">
                         <ItemStyle Width="100px" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="TotalValue" HeaderText="TotalValue" SortExpression="TotalValue" >
+                        <asp:BoundField DataField="TotalValue" HeaderText="TotalValue" SortExpression="TotalValue" DataFormatString="{0:#,##0.##}" >
                         <ItemStyle Width="150px" />
                         </asp:BoundField>
                     </Columns>

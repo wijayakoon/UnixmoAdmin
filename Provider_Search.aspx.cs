@@ -44,7 +44,7 @@ namespace NeemoAdmin
                 int index = Convert.ToInt32(e.CommandArgument);
                 GridViewRow row = gv_Provider.Rows[index];                
                 ListItem item = new ListItem();                
-                Response.Redirect("Provider_Edit.aspx?ProviderID=" + Server.HtmlDecode(row.Cells[1].Text));               
+                Response.Redirect("Provider_New.aspx?ProviderID=" + Server.HtmlDecode(row.Cells[1].Text));               
             }
         }
 

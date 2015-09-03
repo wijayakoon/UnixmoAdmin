@@ -2,6 +2,8 @@
 
 <%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Provider_New.aspx.cs" Inherits="NeemoAdmin.Provider_New" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
         .style1 {
@@ -122,7 +124,7 @@
             <td class="auto-style5" bgcolor="#EFEFEF">Fax</td>
             <td bgcolor="#EFEFEF">
 
-                <asp:TextBox ID="TextBox1" runat="server" Width="350px" MaxLength="100"></asp:TextBox>
+                <asp:TextBox ID="txt_Fax" runat="server" Width="350px" MaxLength="100"></asp:TextBox>
 
 
             </td>
@@ -135,22 +137,6 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style5" bgcolor="#EFEFEF">Mobile</td>
-            <td bgcolor="#EFEFEF">
-
-                <asp:TextBox ID="TextBox3" runat="server" Width="350px" MaxLength="100"></asp:TextBox>
-
-
-            </td>
-            <td bgcolor="#EFEFEF" class="style10">Contact Us Page</td>
-            <td bgcolor="#EFEFEF">
-
-                <asp:TextBox ID="txt_ContactUsURL" runat="server" Width="350px" MaxLength="100"></asp:TextBox>
-
-
-            </td>
-        </tr>
-        <tr>
             <td class="auto-style5" bgcolor="#EFEFEF">Rating</td>
             <td bgcolor="#EFEFEF">
 
@@ -158,10 +144,10 @@
 
 
             </td>
-            <td bgcolor="#EFEFEF" class="style10">Fax</td>
+            <td bgcolor="#EFEFEF" class="style10">Contact Us Page</td>
             <td bgcolor="#EFEFEF">
 
-                <asp:TextBox ID="txt_Fax" runat="server" Width="350px" MaxLength="100"></asp:TextBox>
+                <asp:TextBox ID="txt_ContactUsURL" runat="server" Width="350px" MaxLength="100"></asp:TextBox>
 
 
             </td>
@@ -189,12 +175,16 @@
             </td>
             <td bgcolor="#EFEFEF" class="style9">
                
-            </td>
+                Display on Home Page</td>
             <td bgcolor="#EFEFEF" class="style2">
+                
+                <asp:CheckBox ID="chk_DisplayOnHomePage" runat="server" Checked="True" />
                 
             </td>
         </tr>
     </table>
+    <asp:UpdatePanel ID="UpdatePanel6" runat="server">
+                    <ContentTemplate>
     <table align="left" style="vertical-align: top; width: 1000px;">
         <tr>
             <td class="auto-style1" bgcolor="#EFEFEF">Image</td>
@@ -203,82 +193,62 @@
                 <asp:Button ID="btn_Upload" runat="server" OnClick="btn_Upload_Click"
                     Text="Upload" />
                 <br />
+                
                 <asp:Image ID="Image_Icon" runat="server" Height="30px" Width="30px" />
             </td>
         </tr>
 
     </table>
+                        </ContentTemplate>
+                    <Triggers>
+                        <asp:PostBackTrigger ControlID = "btn_Upload"  />
+                    </Triggers>
+        </asp:UpdatePanel>
     <table align="left" style="vertical-align: top; width: 1000px;">
         <tr>
 
             <td class="auto-style3">
                 <uc1:UC_AddressAutocomplete ID="UC_AddressAutocomplete1" runat="server" />
 
+                <asp:HiddenField ID="HiddenField1" runat="server" />
+                <asp:HiddenField ID="HiddenField2" runat="server" />
+                <asp:HiddenField ID="HiddenField3" runat="server" />
+                <asp:HiddenField ID="HiddenField4" runat="server" />
+                <asp:HiddenField ID="HiddenField5" runat="server" />
+                <asp:HiddenField ID="HiddenField6" runat="server" />
+                <asp:HiddenField ID="HiddenField7" runat="server" />
+                <asp:HiddenField ID="HiddenField8" runat="server" />
+                <asp:HiddenField ID="HiddenField9" runat="server" />
+                <asp:HiddenField ID="HiddenField10" runat="server" />
+
             </td>
 
         </tr>
     </table>
+    <asp:UpdatePanel ID="UpdatePanel5" runat="server">
+        <ContentTemplate>
     <br />
 
     <table align="left" style="vertical-align: top; width: 1000px;">
 
         <tr>
             <td class="auto-style3">
-
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                    <ContentTemplate>
-
-                        <table style="width: 87%;">
-                            <tr>
-                                <td class="style1">
-                                    <h2>Services</h2>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td style="text-align: ">
-                                    <asp:DropDownList ID="drp_ServiceTypes" runat="server" Height="20px" Width="250px">
-                                    </asp:DropDownList>
-                                    <asp:Button ID="btn_ServiceTypes" runat="server" Height="20px" OnClick="btn_ServiceTypeAdd_Click" Text="Add" ValidationGroup="ServiceType" />
-                                    <br />
-                                    <asp:Label ID="lbl_ServiceTypeExists" runat="server" ForeColor="Red" Style="font-weight: 700" Text="Service Type already added to the List" Visible="False"></asp:Label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: ">
-                                    <asp:GridView ID="grv_ServiceTypes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="grv_ProviderTypeList_RowDeleting" Width="249px">
-                                        <AlternatingRowStyle BackColor="White" />
-                                        <Columns>
-                                            <asp:CommandField ShowDeleteButton="True" />
-                                            <asp:BoundField DataField="ServiceTypeID" HeaderText="ServiceTypeID" Visible="False" />
-                                            <asp:BoundField DataField="ServiceTypeName" HeaderText="ServiceTypeName" />
-                                        </Columns>
-                                        <EditRowStyle BackColor="#2461BF" />
-                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                        <RowStyle BackColor="#EFF3FB" />
-                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                                    </asp:GridView>
-                                </td>
-                            </tr>
-                        </table>
-                    </ContentTemplate>
-                    <Triggers>
-
-                        <asp:AsyncPostBackTrigger ControlID="btn_ServiceTypes" EventName="Click" />
-
-                    </Triggers>
-                </asp:UpdatePanel>
-
+                <asp:Button ID="btn_ProviderTypeView" runat="server" Text="Provider Type" OnClick="btn_ProviderTypeView_Click" />
+                <asp:Button ID="btn_ServiceTypeView" runat="server" Text="Service Type" OnClick="btn_ServiceTypeView_Click" />
+                <asp:Button ID="btn_MakeView" runat="server" Text="Make" OnClick="btn_MakeView_Click" />
+               
             </td>
 
             <td class="auto-style3">
-                <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                
+                &nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="auto-style3">
+
+                <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
+                    <asp:View ID="View1" runat="server"><asp:UpdatePanel ID="UpdatePanel3" runat="server">
                     <ContentTemplate>
 
                         <table style="width: 100%;">
@@ -312,7 +282,7 @@
                                         <Columns>
                                             <asp:CommandField ShowDeleteButton="True" />
                                             <asp:BoundField DataField="ProviderTypeID" HeaderText="ProviderTypeID" Visible="False" />
-                                            <asp:BoundField DataField="ProviderTypename" HeaderText="ProviderTypename" />
+                                            <asp:BoundField DataField="ProviderType" HeaderText="ProviderType" />
                                         </Columns>
                                         <EditRowStyle BackColor="#2461BF" />
                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -332,10 +302,126 @@
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="btn_ProviderTypeAdd" EventName="Click" />
                     </Triggers>
+                </asp:UpdatePanel></asp:View>
+                    <asp:View ID="View2" runat="server"> <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+
+                        <table style="width: 87%;">
+                            <tr>
+                                <td class="style1">
+                                    <h2>Services</h2>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td style="text-align: ">
+                                    <asp:DropDownList ID="drp_ServiceTypes" runat="server" Height="20px" Width="250px">
+                                    </asp:DropDownList>
+                                    <asp:Button ID="btn_ServiceTypes" runat="server" Height="20px" OnClick="btn_ServiceTypeAdd_Click" Text="Add" ValidationGroup="ServiceType" />
+                                    <br />
+                                    <asp:Label ID="lbl_ServiceTypeExists" runat="server" ForeColor="Red" Style="font-weight: 700" Text="Service Type already added to the List" Visible="False"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: ">
+                                    <asp:GridView ID="grv_ServiceTypes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="grv_ServiceTypes_RowDeleting" Width="249px">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:CommandField ShowDeleteButton="True" />
+                                            <asp:BoundField DataField="ServiceTypeID" HeaderText="ServiceTypeID" Visible="False" />
+                                            <asp:BoundField DataField="ServiceType" HeaderText="ServiceType" />
+                                        </Columns>
+                                        <EditRowStyle BackColor="#2461BF" />
+                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#EFF3FB" />
+                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                    </asp:GridView>
+                                </td>
+                            </tr>
+                        </table>
+                    </ContentTemplate>
+                    <Triggers>
+
+                        <asp:AsyncPostBackTrigger ControlID="btn_ServiceTypes" EventName="Click" />
+
+                    </Triggers>
                 </asp:UpdatePanel>
+</asp:View>
+                    <asp:View ID="View3" runat="server"><asp:UpdatePanel ID="UpdatePanel4" runat="server">
+                    <ContentTemplate>
+
+                        <table style="width: 87%;">
+                            <tr>
+                                <td class="style1">
+                                    <h2>Makes</h2>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td style="text-align: ">
+                                    <asp:DropDownList ID="drp_Makes" runat="server" Height="20px" Width="250px">
+                                    </asp:DropDownList>
+                                    <asp:Button ID="btn_MakeAdd" runat="server" Height="20px" OnClick="btn_MakeAdd_Click" Text="Add" ValidationGroup="Make" />
+                                    <br />
+                                    <asp:Label ID="lbl_MakeExists" runat="server" ForeColor="Red" Style="font-weight: 700" Text="Make already added to the List" Visible="False"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: ">
+                                    <asp:GridView ID="grv_Make" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="grv_Makes_RowDeleting" Width="249px">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:CommandField ShowDeleteButton="True" />
+                                            <asp:BoundField DataField="MakeID" HeaderText="MakeID" Visible="False" />
+                                            <asp:BoundField DataField="Make" HeaderText="Mak" />
+                                        </Columns>
+                                        <EditRowStyle BackColor="#2461BF" />
+                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#EFF3FB" />
+                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                    </asp:GridView>
+                                </td>
+                            </tr>
+                        </table>
+                    </ContentTemplate>
+                    <Triggers>
+
+                        <asp:AsyncPostBackTrigger ControlID="btn_ServiceTypes" EventName="Click" />
+
+                    </Triggers>
+                </asp:UpdatePanel></asp:View>
+                </asp:MultiView>
+               
+            </td>
+
+            <td class="auto-style3">
+                
             </td>
         </tr>
     </table>
+
+
+            </ContentTemplate>
+        <Triggers>
+
+            <asp:AsyncPostBackTrigger ControlID="btn_ProviderTypeView" EventName="Click" />
+            <asp:AsyncPostBackTrigger ControlID="btn_ServiceTypeView" EventName="Click" />
+            <asp:AsyncPostBackTrigger ControlID="btn_MakeView" EventName="Click" />
+
+        </Triggers>
+            </asp:UpdatePanel>
     <br />
 
     <table align="left" style="vertical-align: top; width: 1000px;">
@@ -349,9 +435,11 @@
                 </asp:UpdateProgress>
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
-                        <asp:Label ID="lbl_NoPriceWarning" runat="server"
-                            Style="color: #990000; font-weight: 700" Text="Please Add Price to This Product"
+                        <asp:Label ID="lbl_NoServiceType" runat="server"
+                            Style="color: #990000; font-weight: 700" Text="Please Add Service Type for this Provider"
                             Visible="False"></asp:Label>
+                        <br />
+                        <asp:Label ID="lbl_NoProviderType" runat="server" Style="color: #990000; font-weight: 700" Text="Please Add Provider Type for this Provider" Visible="False"></asp:Label>
                         <br />
                         <asp:Label ID="lbl_Sucess" runat="server"
                             Style="color: #003300; font-weight: 700" Text="Details Updated"

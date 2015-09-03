@@ -79,7 +79,6 @@
   <ItemGroup>
     <Content Include="Badge_Edit.aspx" />
     <Content Include="geo.html" />
-    <Content Include="Provider_Edit.aspx" />
     <Content Include="Provider_New.aspx" />
     <Content Include="Provider_Search.aspx" />
     <Content Include="DisplayOrder_Edit.aspx" />
@@ -347,13 +346,6 @@
       <DependentUpon>Badge_Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataServices\Providers.cs" />
-    <Compile Include="Provider_Edit.aspx.cs">
-      <DependentUpon>Provider_Edit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Provider_Edit.aspx.designer.cs">
-      <DependentUpon>Provider_Edit.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Provider_New.aspx.cs">
       <DependentUpon>Provider_New.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

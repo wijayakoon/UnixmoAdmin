@@ -16,35 +16,36 @@ namespace NeemoAdmin.DataServices
         SqlConnection con = new SqlConnection(strConnection);
 
         int _ProviderID;
-        string _ProviderName;
-        string _Description;
-        string _Keyword;
-        string _FirstName;
-        string _LastName;
-        string _LevelNo;
-        string _UnitNo;
-        string _StreetNo;
-        string _Street;
-        string _City;
-        string _State;
-        string _PostCode;
-        string _Country;
-        string _Longitude;
-        string _Latitude;
-        string _Mobile;
-        string _Phone;
-        string _Fax;
-        string _EmailAddress;
-        string _URL;
-        int _Rating;
-        string _ContactUsURL;
-        int _DisplayOrderID;
-        string _Image;
-        bool _Active;
+        string _ProviderName="";
+        string _Description = "";
+        string _Keyword = "";
+        string _FirstName = "";
+        string _LastName = "";
+        string _LevelNo = "";
+        string _UnitNo = "";
+        string _StreetNo = "";
+        string _Street="";
+        string _City = "";
+        string _State = "";
+        string _PostCode = "";
+        string _Country = "";
+        string _Longitude = "";
+        string _Latitude = "";
+        string _Mobile = "";
+        string _Phone = "";
+        string _Fax = "";
+        string _EmailAddress = "";
+        string _URL = "";
+        
+        string _ContactUsURL = "";
+        int _DisplayOrderID = 0;
+        string _Image = "";
+        bool _Active = false;
+        bool _DisplayonHomePage = false;
         DateTime _CreatedDateTime;
-        string _CreatedByUser;
+        string _CreatedByUser = "";
         DateTime _LastModifiedDateTime;
-        string _LastModifiedByUser;
+        string _LastModifiedByUser = "";
         ProviderTypes _ProviderType = new ProviderTypes();
         ServiceTypes _ServiceType = new ServiceTypes();
         
@@ -71,11 +72,12 @@ namespace NeemoAdmin.DataServices
         public string Fax { get { return _Fax; } set { _Fax = value; } }
         public string EmailAddress { get { return _EmailAddress; } set { _EmailAddress = value; } }
         public string URL { get { return _URL; } set { _URL = value; } }
-        public int Rating { get { return _Rating; } set { _Rating = value; } }
+        
         public string ContactUsURL { get { return _ContactUsURL; } set { _ContactUsURL = value; } }
         public int DisplayOrderID { get { return _DisplayOrderID; } set { _DisplayOrderID = value; } }
         public string Image { get { return _Image; } set { _Image = value; } }
-        public bool  Active { get { return _Active; } set { _Active = value; } }
+        public bool Active { get { return _Active; } set { _Active = value; } }
+        public bool DisplayonHomePage { get { return _DisplayonHomePage; } set { _DisplayonHomePage = value; } }
         public DateTime CreatedDateTime { get { return _CreatedDateTime; } set { _CreatedDateTime = value; } }
         public string CratedByUser { get { return _CreatedByUser; } set { _CreatedByUser = value; } }
         public DateTime LastModifiedDateTime { get { return _LastModifiedDateTime; } set { _LastModifiedDateTime = value; } }
@@ -140,18 +142,19 @@ namespace NeemoAdmin.DataServices
                 SProcParamArray[17] = new SqlParameter("@Fax", _Fax);
                 SProcParamArray[18] = new SqlParameter("@EmailAddress", _EmailAddress);
                 SProcParamArray[19] = new SqlParameter("@URL", _URL);
-                SProcParamArray[20] = new SqlParameter("@Rating", _Rating);
+                SProcParamArray[20] = new SqlParameter("@Rating", 0);
                 SProcParamArray[21] = new SqlParameter("@ContactUsURL", _ContactUsURL);
                 SProcParamArray[22] = new SqlParameter("@DisplayOrderID", 0);
                 SProcParamArray[23] = new SqlParameter("@Image", _Image);
                 SProcParamArray[24] = new SqlParameter("@Active", _Active);
+                SProcParamArray[25] = new SqlParameter("@DisplayonHomePage", _DisplayonHomePage);
 
 
                 if (_ProviderID > 0)
                 {
                     //Update
-                    SProcParamArray[25] = new SqlParameter("@ProviderID", _ProviderID);
-                    SProcParamArray[26] = new SqlParameter("@LastModifiedByUser", LastModifiedByUser);
+                    SProcParamArray[26] = new SqlParameter("@ProviderID", _ProviderID);
+                    SProcParamArray[27] = new SqlParameter("@LastModifiedByUser", LastModifiedByUser);
                     SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "Provider_update", SProcParamArray);
 
                 }
@@ -223,11 +226,12 @@ namespace NeemoAdmin.DataServices
                     Fax = (dr["Fax"].ToString()) == null ? "" : dr["Fax"].ToString();
                     EmailAddress = (dr["EmailAddress"].ToString()) == null ? "" : dr["EmailAddress"].ToString();
                     URL = (dr["URL"].ToString()) == null ? "" : dr["URL"].ToString();
-                    Rating = Convert.ToInt16(dr["_Rating"].ToString() == null ? "0" : dr["_Rating"].ToString());
+                    //Rating = Convert.ToInt16(dr["_Rating"].ToString() == null ? "0" : dr["_Rating"].ToString());
                     ContactUsURL = (dr["ContactUsURL"].ToString()) == null ? "" : dr["ContactUsURL"].ToString();
-                    DisplayOrderID= Convert.ToInt16(dr["DisplayOrderID"].ToString() == null ? "0" : dr["DisplayOrderID"].ToString());
+                    //DisplayOrderID= Convert.ToInt16(dr["DisplayOrderID"].ToString() == null ? "0" : dr["DisplayOrderID"].ToString());
                     Image = (dr["Image"].ToString()) == null ? "" : dr["Image"].ToString();
                     Active = Convert.ToBoolean(dr["Active"].ToString() == null ? "false" : dr["Active"].ToString());
+                    DisplayonHomePage = Convert.ToBoolean(dr["DisplayonHomePage"].ToString() == null ? "false" : dr["DisplayonHomePage"].ToString());
                     
                    
 

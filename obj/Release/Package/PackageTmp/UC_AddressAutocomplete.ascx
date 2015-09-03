@@ -149,49 +149,49 @@ function geolocate() {
         <td class="label">Level no</td>
         <td class="auto-style2">
            <td class="auto-style2"><input class="field" id="levelno" name="levelno"
-              disabled="true"></input></td>
+              disabled="false"></input></td>
           </td>
           <td>Unit No</td>
         <td class="wideField">
            <td class="auto-style2"><input class="field" id="unitno" name="unitno"
-              disabled="true"></input></td>
+              disabled="false"></input></td>
           </td>
       </tr>
       <tr>
         <td class="label">Street No</td>
         <td class="auto-style2"><input class="field" id="street_number" name="street_number"
-              disabled="true"></input></td>
+              disabled="false"></input></td>
           <td>Street</td>
         <td class="wideField"><input class="field" id="route" name="route"
-              disabled="true"></input></td>
+              disabled="false"></input></td>
       </tr>
       <tr>
         <td class="label">City</td>
         <td class="wideField" colspan="3"><input class="field" id="locality" name="locality"
-              disabled="true"></input></td>
+              disabled="false"></input></td>
       </tr>
       <tr>
         <td class="label">State</td>
         <td class="auto-style2"><input class="field"
-              id="administrative_area_level_1"  name="administrative_area_level_1" disabled="true"></input></td>
+              id="administrative_area_level_1"  name="administrative_area_level_1" disabled="false"></input></td>
         <td class="label">Zip code</td>
         <td class="auto-style1"><input class="field" id="postal_code" name="postal_code"
-              disabled="true"></input></td>
+              disabled="false"></input></td>
       </tr>
       <tr>
         <td class="label">Country</td>
         <td class="wideField" colspan="3"><input class="field"
-              id="country" name="country" disabled="true"></input></td>
+              id="country" name="country" disabled="false"></input></td>
       </tr>
       <tr>
         <td class="label">Latitude</td>
         <td class="wideField" colspan="3"><input class="field"
-              id="latitude"  name="latitude" disabled="true"></td>
+              id="latitude"  name="latitude" disabled="false"></td>
       </tr>
       <tr>
         <td class="label">Longitude</td>
         <td class="wideField" colspan="3"><input class="field"
-              id="longitude"  name="longitude" disabled="true"> </td>
+              id="longitude"  name="longitude" disabled="false"> </td>
       </tr>
     </table>
 
